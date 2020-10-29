@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'amatic_scregular';
+    src: url('amaticsc-regular-webfont.woff2') format('woff2'),
+         url('amaticsc-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'amaticbold';
+    src: url('amatic-bold-webfont.woff2') format('woff2'),
+         url('amatic-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'anonymous_proregular';
+    src: url('anonymous_pro-webfont.woff2') format('woff2'),
+         url('anonymous_pro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'boston_trafficregular';
+    src: url('boston_traffic-webfont.eot');
+    src: url('boston_traffic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('boston_traffic-webfont.woff2') format('woff2'),
+         url('boston_traffic-webfont.woff') format('woff'),
+         url('boston_traffic-webfont.ttf') format('truetype'),
+         url('boston_traffic-webfont.svg#boston_trafficregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'some_time_laterregular';
+    src: url('sometimelater-webfont.woff2') format('woff2'),
+         url('sometimelater-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* PALETTE
+--xiketic: #070014ff;
+--purple-mountain-majesty: #a17ec9ff;
+--sky-blue-crayola: #73e9f8ff;
+--amaranth: #de2b4bff;
+--minion-yellow: #ffe548ff;*/
+
+
+body {
+    font-family: anonymous_proregular;
+    background: #0a0a0a;
+    color: #73e9f8;
+}
+
+header {
+    font-family: anonymous_proregular;
+    font-weight: bold;
+    font-size: 40px;
+    color: #a17ec9;
+}
+
+a.nav-link {
+    font-family: amatic_scregular;
+    font-size: 30px;
+    font-variant-caps: small-caps;
+    text-decoration: none;
+    color: #73e9f8;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    font-family: amaticbold;
+    color: #de2b4b;
+    font-size: 50px;
+}
+
+code {
+    background: #070014;
+    color: #ffe548;
+    padding: 2vw;
+    margin: 1vw;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}

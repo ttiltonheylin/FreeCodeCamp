@@ -403,7 +403,8 @@ div.button-wrap {
   align-items: center;
   margin: 5vw 0;
 }
-div.sub-contact button {
+div.sub-contact button,
+#submit {
     background: #FF4B3E;
     color: white;
     box-shadow: none;
