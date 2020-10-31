@@ -48,49 +48,238 @@
 
 
 /* PALETTE
---xiketic: #070014ff;
+
+ --xiketic: #070014ff;
 --purple-mountain-majesty: #a17ec9ff;
 --sky-blue-crayola: #73e9f8ff;
 --amaranth: #de2b4bff;
---minion-yellow: #ffe548ff;*/
+--minion-yellow: #ffe548ff;
 
-
+/*GENERAL STYLING*/
 body {
     font-family: anonymous_proregular;
     background: #0a0a0a;
     color: #73e9f8;
+    font-size: 20px;
+    display: flex;
+    margin: 0;
 }
-
 header {
+    font-family: some_time_laterregular;
+    color: #de2b4b;
+    font-size: 50px;
+}
+h2 {
     font-family: anonymous_proregular;
     font-weight: bold;
     font-size: 40px;
     color: #a17ec9;
 }
-
-a.nav-link {
-    font-family: amatic_scregular;
-    font-size: 30px;
-    font-variant-caps: small-caps;
-    text-decoration: none;
-    color: #73e9f8;
-}
-
-li {
-    list-style: none;
-}
-
-h2 {
-    font-family: amaticbold;
-    color: #de2b4b;
-    font-size: 50px;
-}
-
 code {
     background: #070014;
     color: #ffe548;
     padding: 2vw;
-    margin: 1vw;
+    margin: 3vh 1vw;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
+
+p {
+    font-family: anonymous_proregular;
+    color: #73e9f8;
+    font-size: 20px;
+}
+li {
+    list-style: none;
+}
+
+
+
+/*NAVBAR*/
+div#nav-wrap {
+    background:#141414;
+    display: inline;
+    position: relative;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+}
+img#logo {
+    display: flex;
+    position: absolute;
+    top: -10vh;
+    left: 25vw;
+    width: 50vw;
+}
+a img#toggle-bars {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 8vw;
+    padding: 5px;
+    border: gray thin solid;
+    background: #070014;
+    z-index: 100;
+}
+
+header#page-desc {
+    text-align: center;
+    margin: 15vh auto;
+}
+#page-desc p {
+    text-align: center;
+    line-height: 7vw;
+}
+
+h6#author {
+    font-family: anonymous_proregular;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    margin: 0;
+    display: flex;
+    color: #de2b4b
+}
+
+
+div#js-menu {
+    display: none;
+}
+
+div#js-menu.active {
+    z-index: 51;
+    background: #070014;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    width: 50vw;
+    height: auto;
+    margin: 9vh 0;
+    padding: 2vh 0 5vh 3vw;
+    justify-content: center;
+    align-content: center; 
+    font-size: 8vw;
+
+}
+
+div#js-menu.active ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;  
+  margin: 0;
+  padding: 0;
+    
+}
+
+a.nav-link {
+    font-family: anonymous_proregular;
+    font-variant-caps: small-caps;
+    text-decoration: none;
+    font-weight: bold;
+    color: #a17ec9;
+}
+
+#disclaimer {
+    font-size: 4vw;
+    color: #de2b4b;
+}
+
+a.nav-link:hover {
+    color:#73e9f8;
+}
+
+
+/*DESKTOP NAVBAR*/
+
+@media (min-width:576px){
+    
+div#nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30vw;
+    background: #141414;
+}
+    
+div#info-wrap {
+    display: flex;
+    align-self: flex-end;
+    width: 65vw;
+    text-align: left;
+}
+    
+#logo {
+        display: none;
+    }
+
+} 
+/* breakpoint end*/
+
+
+/*CONTAINER DIVS*/
+div#page-wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+div#info-wrap {
+    display: flex;
+    align-self: flex-end;
+    width: auto;
+    text-align: left;
+    margin-top: 20vw;
+}
+#md-header-wrap{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    margin: 0;
+    width: 100%;
+    background: #0a0a0a;
+}
+
+img#header-img {
+    width: 100%;
+    height: auto;
+    margin: 10vw auto;
+    display: flex;
+}
+
+img#squidward {
+    width: 15vw;
+    position: absolute;
+    left: 30vw;
+    bottom: 3vh;
+}
+
+img#doodle-bob {
+    width: 20vw;
+    position: absolute;
+    right: 10vw;
+    z-index: 1;
+
+}
+
+div.section-wrap {
+    margin: 5vh 2vw 10vh 4vw;
+}
+
+div.section-wrap.one {
+    margin-top: 5vh;
+    
+}
+
