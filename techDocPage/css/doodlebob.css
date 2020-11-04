@@ -3,44 +3,40 @@
 
 @font-face {
     font-family: 'amatic_scregular';
-    src: url('amaticsc-regular-webfont.woff2') format('woff2'),
-         url('amaticsc-regular-webfont.woff') format('woff');
+    src: url('doodle-bob-font/amaticsc-regular-webfont.woff2') format('woff2'),
+         url('doodle-bob-font/amaticsc-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'amaticbold';
-    src: url('amatic-bold-webfont.woff2') format('woff2'),
-         url('amatic-bold-webfont.woff') format('woff');
+    src: url('doodle-bob-font/amatic-bold-webfont.woff2') format('woff2'),
+         url('doodle-bob-font/amatic-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'anonymous_proregular';
-    src: url('anonymous_pro-webfont.woff2') format('woff2'),
-         url('anonymous_pro-webfont.woff') format('woff');
+    src: url('doodle-bob-font/anonymous_pro-webfont.woff2') format('woff2'),
+         url('doodle-bob-font/anonymous_pro-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'boston_trafficregular';
-    src: url('boston_traffic-webfont.eot');
-    src: url('boston_traffic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('boston_traffic-webfont.woff2') format('woff2'),
-         url('boston_traffic-webfont.woff') format('woff'),
-         url('boston_traffic-webfont.ttf') format('truetype'),
-         url('boston_traffic-webfont.svg#boston_trafficregular') format('svg');
+    src: url('doodle-bob-font/boston_traffic-webfont.woff2') format('woff2'),
+         url('doodle-bob-font/boston_traffic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'some_time_laterregular';
-    src: url('sometimelater-webfont.woff2') format('woff2'),
-         url('sometimelater-webfont.woff') format('woff');
+    src: url('doodle-bob-font/sometimelater-webfont.woff2') format('woff2'),
+         url('doodle-bob-font/sometimelater-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -121,7 +117,7 @@ a img#toggle-bars {
     background: #070014;
     z-index: 100;
 }
-header#page-desc {
+h3#page-desc {
     text-align: center;
     margin: 15vh auto;
 }
