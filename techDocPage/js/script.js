@@ -1,4 +1,4 @@
-/*WHAT I GOT*/
+"webkitAnimationEnd""webkitAnimationEnd""webkitAnimationEnd"/*WHAT I GOT*/
 /*eslint-env es6*/
 
 //TOGGLE BAR SWITCH
@@ -13,7 +13,7 @@ navBarToggle.addEventListener('click', function () {
 
 //ALTERNATE CSS
 
-var themeToggle = document.getElementById('theme-toggle')
+var themeToggle = document.getElementById('theme-toggle');
 // LINK ELEMENT
 var head = document.getElementsByTagName('head')[0];
 var mainCss = document.getElementsByTagName('link')[0];
@@ -71,6 +71,6 @@ themeToggle.addEventListener('change', function() {
     if (this.checked) {
         alternateCss();
     }else {
-        alternateCss();
+        alternateCss(); 
     }
 })

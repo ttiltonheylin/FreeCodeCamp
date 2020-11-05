@@ -29,6 +29,16 @@ src: local('Myriad Pro Light'), url('squidward-font/MyriadPro-Light.woff') forma
 --rich-black-fogra-39: #080b0cff;
 */
 
+/*Ai PALATTE
+080b0c    :dark: 
+122932    :dark blue: 
+204a59    :medium blue:
+669fb7     :light blue:
+d8e4e9    :light:
+576066    :gray:
+
+*/
+
 
 /*GENERAL STYLING*/
 body {
@@ -189,22 +199,27 @@ div.section-wrap {
         position: fixed;
         top: 0;
         left: 0;
+        width: inherit;
+        margin: auto;
+    }
+    header#main-section {
+        width: 100%;
+        
     }
     h3#page-desc {
         display: flex;
         margin: 8vh 0 0 2vw;
         color: white;
-		font-size: 6vw;
+		font-size: 3vw;
         font-variant-caps: all-petite-caps;
     }
     p#p-desc {
         display: flex;
         flex-direction: column;
-        width: 100%;
         margin: 0;
         padding: 2vw;
         line-height: 2.5vw;
-        font-size: 1.7vw;
+        font-size: 1.3vw;
         font-weight: bolder;
     }
     mark {
@@ -212,84 +227,88 @@ div.section-wrap {
         text-align: center;
     }
     div#js-menu{
-        display: flex;
+        display: inline-flex;
+        flex-direction: row;
         padding: 0;
         margin: 0;
     }
     ul#drop-menu {
-        flex-direction: column;
+        flex-direction: row;
         margin: 0;
     }
     
     ul#drop-menu li {
-        display: flex;
-        flex: 50%;
+        display: inline-block;
+        width: 40%
+
     }
     a.nav-link {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
-    a#disclaimer {
-        font-size: 2vw;
-        margin-top: 3vh;
+    li#disclaimer-li {
+        width: 80% !important;
+        margin-top: 3vh 0;
+        padding: 0;
+        text-align: center;
+    }
+    a#disclaimer{
+        font-size: 1.5vw;
         color: #73e9f8;
+
     }
-    h6#author {
-        display: inline;
-        position: relative;
-        bottom: 0;
-        left: 10vw;
-		font-size: 2vw;
+    li#author-li {
+        width: 80% !important;
+        text-align: right;
+        margin: 7vh 3vw;
         font-family: 'Myriad Pro Light';
-        color: white;
     }
+    a#author {
+        font-size: 1.3vw;
+        font-variant-caps: normal;
+        color: black;
+
+    }
+    
 
 /*PAGE STYLING*/
+        div#info-wrap {
+        display: flex;
+        position: relative;
+        top: 0;
+        border-top: none;
+        flex: 65%;
+    }
+	
     #md-header-wrap {
 background: linear-gradient(90deg, rgba(18,41,50,1) 0%, rgba(78,93,89,1) 100%);
         border-bottom: yellow 5px solid;
+        border-top: none;
     }
     
     img#header-img {
         display: flex;
         position: relative;
+        top: 0;
+        left: 0;
         width: 100%;
         margin: 0;
-        border-bottom: none;
+        border: none;
 		box-shadow: none;
     }
     
-    div#info-wrap {
-        display: flex;
-        position: relative;
-        top: 0;
-        flex: 65%;
-    }
-	
+
 /*TOGGLE STYLING*/
 	#toggle-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin: auto;
-		position: relative;
-		background: black;
-		width: 100px;
-		height: 100px;
-		padding: 10px;
-	}
+        position: relative;
+        top: 30px;
+        right: -20vw;    
+    }
 	.label {
-		color: white;
+        display: flex;
 	}
 	.input {
-		display: flex;
-		opacity: 1;
-		height: 20px;
-		width: 20px;
+		display: none;
 		cursor: pointer;
-	}
-	.input:checked {
-		background: #808080;	
 	}
 	
 	.switch {
@@ -297,47 +316,30 @@ background: linear-gradient(90deg, rgba(18,41,50,1) 0%, rgba(78,93,89,1) 100%);
 		align-self: center;
 		justify-self: center;
 		margin: auto;
-		width: 75px;
-		height: 50px;
-		background: black;
-		border: white 5px solid;
+		width: 80px;
+		height:  40px;
+        background: linear-gradient(90deg, rgba(18,41,50,1) 0%, rgba(78,93,89,1) 100%);
+        border: #d8e4e9  3px solid;
+        box-shadow: inset -1px 5px 20px black, 0 0 15px -7px black ;
 		border-radius: 30px;
 		transition:ease .4s;
 	}
 	.switch:before {
 		content: "";
-		top: 5px;
-		left: 5px;	
+		top: 0;
+		left: 0;	
 		margin: 5px;
-		height: 35px;
-		width: 35px;
-		background: white;
+		height: 25px;
+		width: 25px;
+        border:  #d8e4e9 3px solid;
+		background: #669fb7;
+        box-shadow: -8px 0px 15px black;
 		border-radius: 50%;
 		transition: .4s;
 	}
-/*
-	.switch:after {
-		content: "";
-		top: 5px;
-		right: 5px;
-		height: 35px;
-		width: 35px;
-		opacity: 0;
-		background: white;
-		border-radius: 50%;
-		transition: .4s;
-	}
-*/
-	.input:checked ~ .switch:before{
-		opacity:1;
-		transform: translate(30px,0);
-		transition: .5s;
-	}
-/*
-	.input:checked ~ .switch:after{
-		opacity:1;
-	}
-*/
-    
+    .input:checked ~ .switch:before {
+        transform: translate(40px, 0);
+        transition: 0 .5s ease-in-out;
+    }
 }
 /* breakpoint end*/
