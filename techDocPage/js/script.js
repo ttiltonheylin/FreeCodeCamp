@@ -1,6 +1,7 @@
 /*WHAT I GOT*/
 /*eslint-env es6*/
 
+//TOGGLE BAR SWITCH
 let mainNav = document.getElementById('js-menu');
 let navBarToggle = document.getElementById('js-navbar-toggle');
 
@@ -10,40 +11,66 @@ navBarToggle.addEventListener('click', function () {
 });
 
 
-//1. IDENTIFY TOGGLE ELEMENT
-let toggleSwitch = document.getElementById('theme-toggle');
-let cssSheet = document.getElementsByTagName('link')[0];
-let cssHref = cssSheet.href;
-let cssTitle = cssSheet.title;
-let headerImg = document.getElementsByTagName('img')[2];
-let headerImgSrc = headerImg.src;
-	console.log(cssSheet);
-	console.log("href: "+cssHref);
-	console.log("title: "+cssTitle);
-	console.log(headerImg);
-	console.log("img source:"+headerImgSrc);
-//2. ADD LISTENER FOR .CHECKED	
-toggleSwitch.addEventListener('change', function() {
-	if(cssTitle=='squidward'){
-		cssSheet.setAttribute('href', 'css/doodlebob.css');
-		cssSheet.setAttribute('title', 'doodlebob')
-		headerImg.setAttribute('src', 'resources/projector.png')
-		console.log(cssHref);
-		console.log(cssSheet);
-		console.log(headerImg);
-		console.log(headerImgSrc);
-	}else if (cssTitle=="doodlebob"){
-		cssSheet.setAttribute('href', 'css/squidward.css');
-		cssSheet.setAttribute('title', 'squidward')
-		headerImg.setAttribute('src', 'resources/cutout.png')
-		console.log(cssHref);
-		console.log(cssSheet);
-		console.log(headerImg);
-		console.log(headerImgSrc);	  
-	}
-});
+//ALTERNATE CSS
 
-//
-//
-//
+var themeToggle = document.getElementById('theme-toggle')
+// LINK ELEMENT
+var head = document.getElementsByTagName('head')[0];
+var mainCss = document.getElementsByTagName('link')[0];
+var link = document.createElement('link');
+// RESOURCES
+var headerImg = document.getElementById('header-img');
+var toggleBars = document.getElementById("toggle-bars");
+//ATTRIBUTES
+var squidward = { 
+    cssHref: "css/squidward.css",
+    headerImg: "resources/cutout.png",
+    toggleBars: "resources/toggle-bars-squid.png",
+                };
+var doodlebob = {
+    cssHref: "css/doodlebob.css",
+    headerImg: "resources/projector.png",
+    toggleBars: "resources/toggle-bars-tri-color.png"
+                }
 
+//CSS CHANGE FUNCTION
+function alternateCss() {
+    console.log("class: "+mainCss.className);
+    console.log("id: "+mainCss.id);
+    
+    if (mainCss.className == 'squidward'){
+        console.log(doodlebob);
+        // CHANGE THE CSS STYLING
+        mainCss.setAttribute('class', "doodlebob")
+        mainCss.setAttribute('href', doodlebob.cssHref);
+        
+        //CHANGE THE HEADER IMG + TOGGLE BARS
+        headerImg.setAttribute('src', doodlebob.headerImg);
+        toggleBars.setAttribute('src', doodlebob.toggleBars)
+        
+        //RELOAD WINDOW AND DOUBLE CHECK ATTRIBUTES
+        console.log("New CSS: "+mainCss.className);
+        window.location.reload;
+    }else {
+        console.log(squidward);
+        // CHANGE THE CSS STYLING
+        mainCss.setAttribute('class', 'squidward');
+        mainCss.setAttribute('href', squidward.cssHref);
+        
+        //CHANGE THE HEADER IMG + TOGGLE BARS
+        headerImg.setAttribute('src', squidward.headerImg);
+        toggleBars.setAttribute('src', squidward.toggleBars);
+        
+         //RELOAD WINDOW AND DOUBLE CHECK ATTRIBUTES
+        console.log("New CSS: "+mainCss.className);
+        window.location.reload;
+    }
+}
+
+themeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        alternateCss();
+    }else {
+        alternateCss();
+    }
+})
