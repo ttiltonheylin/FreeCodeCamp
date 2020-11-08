@@ -78,6 +78,7 @@ body {
 header {
     font-family: 'Myriad Pro Light';
     font-size: 50px;
+
 }
 h2 {
     color: #576066;
@@ -108,8 +109,8 @@ div#nav-wrap {
 a img#toggle-bars {
     display: flex;
     position: fixed;
-    top: 40vh;
-    right: 20px;
+    top: 18px;
+    right: 18px;
     width: 8vw;
     padding: 5px 5px 5px 5px;
     margin-left: -40px;;
@@ -211,11 +212,11 @@ div.section-wrap.one {
 }
 
 div.section-wrap {;
-    margin: 5vh 2vw 10vh 4vw;
+    margin: 25vh 2vw 10vh 4vw;
 } 
-div.section-wrap header, 
-div.section-wrap h2 {
-    width: fit-content;
+div.section-wrap section header, 
+div.section-wrap section h2 {
+    width: fit-content !important;
     background: rgba(255,255,255, 1);
     padding: .5vh 2vh;    
 }

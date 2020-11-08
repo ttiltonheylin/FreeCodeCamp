@@ -255,12 +255,12 @@ div.section-wrap {
     margin: 5vh 2vw 35vh 4vw;
 }
 div.section-wrap.one {
-    margin-top: 5vh;
+    margin-top: 15vh;
 }
-div.section-wrap > header {
+div.section-wrap section header {
     width: fit-content;
 }
-div.section-wrap h2 {
+div.section-wrap section h2 {
     width: fit-content;
     font-size: 8vw;
     padding: 1vh;
@@ -377,42 +377,50 @@ code {
         width: fit-content;
         position: relative; 
         font-size: 3vw;
+        margin-top: 10vh;
     }
     p#p-desc {
-        line-height: 2.5vw;
-        font-size: 1.7vw;
+        line-height: 2vw;
+        font-size: 1.3vw;
         margin-left: 1vw;
     }
     div#js-menu{
         display: flex;
         width: 30vw;
+        height: 60vh;
         margin: 0;
         padding: 0;
     }
     ul#drop-menu {
         display: inline-block;
         width: 30vw;
+        height: fit-content;
+        line-height: 10vh;
         margin: 0;
         padding: 0;
     }
     ul#drop-menu li {
         display: inline-block;
         width: 40%;
+        height: fit-content;
         margin: 0;
         padding: 0;
         text-align: left;
     }
     a.nav-link {
+        display: flex;
+        width: fit-content;
         margin: 0;
         padding: 0;
         font-size: 2vw;
     }
     a#disclaimer {
         font-size: 2vw;
-        margin-top: 3vh;
+        margin: auto;
+        text-align: center;
     }
-    li#disclaimed {
-        width: 100%;
+    li#disclaimer-li {
+        width: 100% !important;
         text-align: center;
     }
     #author {
@@ -444,6 +452,9 @@ code {
     }
     div.section-wrap {
         margin-bottom: 12vh;
+    }
+    div.section-wrap.one {
+        margin-top: 5vh;
     }
     div.section-wrap header {
         width: fit-content;
