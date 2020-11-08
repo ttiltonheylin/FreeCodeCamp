@@ -55,7 +55,6 @@ function alternateCss() {
         
         //RELOAD WINDOW AND DOUBLE CHECK ATTRIBUTES
         console.log("New CSS: "+mainCss.className);
-        window.location.reload;
     }else {
         console.log(squidward);
         // CHANGE THE CSS STYLING
@@ -68,18 +67,12 @@ function alternateCss() {
         
          //RELOAD WINDOW AND DOUBLE CHECK ATTRIBUTES
         console.log("New CSS: "+mainCss.className);
-        window.location.reload;
     }
 }
-
-
-themeToggle.addEventListener('click', toggler)
 
 
 function toggler() {
-    toggleSwitchButton.classList.toggle('switched');
-    toggleSwitchButton.ontransitionend = () => {
-        console.log("Transition Ended");
-        alternateCss();
-    }
-}
+        toggleSwitchButton.classList.toggle('switched')
+        toggleSwitchButton.ontransitionend = alternateCss(); 
+        }
+

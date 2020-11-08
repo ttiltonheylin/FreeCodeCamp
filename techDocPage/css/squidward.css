@@ -421,6 +421,14 @@ div.section-wrap section p {
     .section-wrap {
         padding: 2vh 4vw ;
     }
+    
+    .section-wrap h2 {
+        padding: 2vh 2vw 4vh 2vw;;
+        border-top: black 2px solid;
+        background-color: rgba(252,252,252, 1);
+        box-shadow: -5px 5px 30px -10px black;
+
+    }
 
 /*TOGGLE STYLING*/
 	#toggle-container {
